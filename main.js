@@ -10,3 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.querySelector('.resume-btn').addEventListener('click', function(e) {
+  e.preventDefault();
+  const link = document.createElement('a');
+  link.href = 'assets/NamburiDurgaDeepika.pdf';
+  link.download = 'NamburiDurgaDeepika.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
